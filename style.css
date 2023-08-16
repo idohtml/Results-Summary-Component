@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+
+:root {
+  --primary-red: hsl(0, 100%, 67%);
+  --primary-light-red: hsla(0, 100%, 67%, 0.2);
+  --primary-yellow: hsl(39, 100%, 56%);
+  --primary-light-yellow: hsla(39, 100%, 56%, 0.2);
+  --primary-green: hsl(166, 100%, 37%);
+  --primary-light-green: hsla(166, 100%, 37%, 0.2);
+  --primary-cobalt: hsl(234, 85%, 45%);
+  --primary-light-cobalt: hsl(234, 85%, 45%, 0.2);
+
+  --bg-slate-blue: hsl(252, 100%, 67%);
+  --bg-royal-blue: hsl(241, 81%, 54%);
+
+  --cr-violet-blue: hsla(256, 72%, 46%, 1);
+  --cr-persian-blue: hsla(241, 72%, 46%, 0);
+
+  --neu-white: hsl(0, 0%, 100%);
+  --neu-blue: hsl(221, 100%, 96%);
+  --neu-lavender: hsl(241, 100%, 89%);
+  --neu-dark-gray: hsl(224, 30%, 27%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+  background-color: var(--neu-white);
+}
+
+p {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+h1 {
+  font-weight: 800;
+}
+
+h2 {
+  font-weight: 700;
+}
+
+.col-1 {
+  border-radius: 0 0px 24px 24px;
+  overflow: hidden;
+}
+
+.col-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background: linear-gradient(
+    to top,
+    var(--bg-royal-blue),
+    var(--bg-slate-blue)
+  );
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+}
+
+.col-1::before,
+.col-1::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.col-1::before {
+  background: linear-gradient(
+    to bottom,
+    var(--cr-violet-blue),
+    var(--cr-persian-blue)
+  );
+  border-radius: 50%;
+  width: 25%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.col-1 p:first-child {
+  color: var(--neu-lavender);
+  margin: 12px;
+}
+
+.col-1 h1 {
+  color: var(--neu-lavender);
+  font-size: 16px;
+
+  margin: 12px;
+  z-index: 1;
+}
+
+.col-1 h1 span {
+  color: var(--neu-white);
+  font-size: 72px;
+}
+
+.col-1 h2 {
+  color: var(--neu-white);
+  margin: 24px auto 12px;
+}
+
+.col-1 p {
+  color: var(--neu-lavender);
+  margin: 12px;
+}
+
+/* Section 2 */
+
+.col-2 {
+  width: 100%;
+  padding: 1rem;
+}
+
+.col-2 h2 {
+  color: var(--neu-dark-gray);
+  font-size: 20px;
+  margin: 14px 0 32px 0;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-radius: 8px;
+  padding: 1.2rem 1rem;
+  position: relative;
+}
+
+.card:nth-child(1) {
+  background-color: var(--primary-light-red);
+  color: var(--primary-red);
+}
+
+.card:nth-child(2) {
+  background-color: var(--primary-light-yellow);
+  color: var(--primary-yellow);
+}
+
+.card:nth-child(3) {
+  background-color: var(--primary-light-green);
+  color: var(--primary-green);
+}
+
+.card:nth-child(4) {
+  background-color: var(--primary-light-cobalt);
+  color: var(--primary-cobalt);
+}
+
+.card-image {
+  display: inline-flex;
+  gap: 14px;
+}
+
+.card-score {
+  color: var(--neu-dark-gray);
+}
+
+/* BUTTON */
+
+.btn {
+  display: inline-block;
+  padding: 1.2rem 1rem;
+  border: none;
+  border-radius: 32px;
+  font-weight: 700;
+  font-size: 18px;
+  text-decoration: none;
+  color: var(--neu-white);
+  background-color: var(--neu-dark-gray);
+}
+
+/* Media Querys */
+
+@media (min-width: 768px) {
+  .section-container {
+    display: grid;
+    place-items: center;
+
+    height: 100vh;
+  }
+
+  .flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    border-radius: 24px;
+    box-shadow: var(--neu-blue) 8px 8px 12px 0px;
+
+    width: 750px;
+  }
+
+  .col-1 {
+    border-radius: 24px;
+    padding: 2.5rem;
+  }
+
+  .col-1 h1 {
+    font-size: 20px;
+  }
+
+  .col-1 h1 span {
+    font-size: 100px;
+  }
+
+  .col-1 h2 {
+    font-size: 32px;
+    margin: 0;
+  }
+
+  .col-2 {
+    padding: 2.5rem;
+  }
+
+  .btn {
+    margin-top: 2rem;
+  }
+
+  .btn:hover {
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(
+      to top,
+      var(--bg-royal-blue),
+      var(--bg-slate-blue)
+    );
+  }
+}

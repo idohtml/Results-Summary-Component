@@ -1,47 +1,75 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+  <link rel="stylesheet" href="style.css" />
   <title>Frontend Mentor | Results summary component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
+  <main>
+    <section class="section-container">
+      <div class="flex">
+        <div class="col-1">
+          <p>Your Results</p>
+          <h1>
+            <span>76</span><br />
+            of 100
+          </h1>
+          <h2>Great</h2>
+          <p>
+            You scored higher than 65% of the people who have taken these
+            tests.
+          </p>
+        </div>
 
-  Your Result
-  76
-  of 100
-
-  Great
-  You scored higher than 65% of the people who have taken these tests.
-  
-  Summary
-
-  Reaction
-  80 / 100
-
-  Memory
-  92 / 100
-
-  Verbal
-  61 / 100
-
-  Visual
-  72 / 100
-
-  Continue
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+        <div class="col-2">
+          <h2>Summary</h2>
+          <div class="card-container">
+            <div class="card">
+              <div class="card-image">
+                <img src="assets/images/icon-reaction.svg" alt="Icon logo" />
+                <h3>Reaction</h3>
+              </div>
+              <p class="card-score">80 / 100</p>
+            </div>
+            <div class="card">
+              <div class="card-image">
+                <img src="assets/images/icon-memory.svg" alt="Icon logo" />
+                <h3>Memory</h3>
+              </div>
+              <p class="card-score">92 / 100</p>
+            </div>
+            <div class="card">
+              <div class="card-image">
+                <img src="assets/images/icon-verbal.svg" alt="Icon logo" />
+                <h3>Verbal</h3>
+              </div>
+              <p class="card-score">61 / 100</p>
+            </div>
+            <div class="card">
+              <div class="card-image">
+                <img src="assets/images/icon-visual.svg" alt="Icon logo" />
+                <h3>Visual</h3>
+              </div>
+              <p class="card-score">72 / 100</p>
+            </div>
+            <button class="btn">Continue</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
+      <a href="https://github.com/idohtml" target="_blank">idohtml</a>.
+    </div>
+  </footer>
 </body>
+
 </html>
